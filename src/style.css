@@ -1,0 +1,492 @@
+/* Twin Peaks Japan - The Black Lodge Archive */
+
+/* ================================================
+   HERO TITLE - DOUBLE VISION EFFECT
+   ================================================ */
+
+.hero-title {
+  position: relative;
+  display: inline-block;
+}
+
+/* Red offset shadow - doppelganger effect with drift animation */
+.hero-title::before {
+  content: "DAVID LYNCH";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #c41e3a;
+  opacity: 0.7;
+  z-index: -1;
+  animation: drift 8s ease-in-out infinite;
+}
+
+/* Subtle white offset for depth */
+.hero-title::after {
+  content: "DAVID LYNCH";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.1);
+  transform: translate(-2px, -2px);
+  z-index: -1;
+}
+
+@keyframes drift {
+
+  0%,
+  100% {
+    transform: translate(4px, 4px);
+  }
+
+  25% {
+    transform: translate(6px, 3px);
+  }
+
+  50% {
+    transform: translate(3px, 6px);
+  }
+
+  75% {
+    transform: translate(5px, 2px);
+  }
+}
+
+/* ================================================
+   RED ROOM / BLACK LODGE BACKGROUND
+   ================================================ */
+
+/* Zigzag floor pattern - iconic Black Lodge chevron */
+.zigzag-floor {
+  background-color: #0a0a0a;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0 L20 0 L20 20 L0 20 Z' fill='%23ffffff'/%3E%3Cpath d='M20 20 L40 20 L40 40 L20 40 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  background-size: 40px 40px;
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  width: 200%;
+  height: 60%;
+  transform: perspective(400px) rotateX(70deg);
+  transform-origin: center bottom;
+}
+
+/* Red curtain effect - full background */
+.red-curtain-full {
+  background:
+    radial-gradient(ellipse at center, transparent 0%, rgba(10, 10, 10, 0.5) 70%),
+    linear-gradient(to right,
+      #4a0000 0%,
+      #2a0000 15%,
+      #1a0000 30%,
+      #0c0c0c 50%,
+      #1a0000 70%,
+      #2a0000 85%,
+      #4a0000 100%);
+}
+
+/* Radial vignette for depth */
+.bg-radial-vignette {
+  background: radial-gradient(ellipse at center,
+      transparent 0%,
+      transparent 40%,
+      rgba(12, 12, 12, 0.8) 100%);
+}
+
+/* Floating particles - Lodge atmosphere (subtle, elegant) */
+.lodge-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.lodge-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: floatDrift ease-in-out infinite;
+}
+
+/* Red particles - eerie glow */
+.lodge-particle:nth-child(2),
+.lodge-particle:nth-child(5),
+.lodge-particle:nth-child(7) {
+  background: radial-gradient(circle, rgba(196, 30, 58, 0.8) 0%, transparent 70%);
+  filter: blur(2px);
+}
+
+/* Fewer, more spread out particles */
+.lodge-particle:nth-child(1) {
+  left: 15%;
+  animation-duration: 25s;
+  animation-delay: 0s;
+  width: 4px;
+  height: 4px;
+}
+
+.lodge-particle:nth-child(2) {
+  left: 35%;
+  animation-duration: 30s;
+  animation-delay: -8s;
+  width: 2px;
+  height: 2px;
+  filter: blur(2px);
+}
+
+.lodge-particle:nth-child(3) {
+  left: 55%;
+  animation-duration: 28s;
+  animation-delay: -15s;
+  width: 3px;
+  height: 3px;
+}
+
+.lodge-particle:nth-child(4) {
+  left: 75%;
+  animation-duration: 32s;
+  animation-delay: -5s;
+  width: 2px;
+  height: 2px;
+}
+
+.lodge-particle:nth-child(5) {
+  left: 25%;
+  animation-duration: 35s;
+  animation-delay: -20s;
+  width: 3px;
+  height: 3px;
+  filter: blur(2px);
+}
+
+.lodge-particle:nth-child(6) {
+  left: 65%;
+  animation-duration: 27s;
+  animation-delay: -12s;
+  width: 4px;
+  height: 4px;
+}
+
+.lodge-particle:nth-child(7) {
+  left: 85%;
+  animation-duration: 33s;
+  animation-delay: -3s;
+  width: 2px;
+  height: 2px;
+  filter: blur(1.5px);
+}
+
+.lodge-particle:nth-child(8) {
+  left: 45%;
+  animation-duration: 29s;
+  animation-delay: -18s;
+  width: 3px;
+  height: 3px;
+}
+
+@keyframes floatDrift {
+  0% {
+    transform: translateY(70vh) translateX(0);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(30vh) translateX(20px);
+    opacity: 0.3;
+  }
+
+  85% {
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(-10vh) translateX(-10px);
+    opacity: 0;
+  }
+}
+
+/* ================================================
+   GENERAL STYLES
+   ================================================ */
+
+/* Film grain noise overlay */
+.bg-noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0c0c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c41e3a;
+}
+
+/* Search Overlay */
+#search-container {
+  transform: translateY(-150%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#search-container.open {
+  transform: translateY(0);
+}
+
+#search-input {
+  caret-color: #c41e3a;
+}
+
+#search-input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Prose styling for article content */
+.prose-custom blockquote {
+  font-style: italic;
+  border-left: 2px solid #c41e3a;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+}
+
+.prose-custom ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.prose-custom li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-custom li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #c41e3a;
+}
+
+/* Card hover effects */
+.read-more {
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  transform: translateY(-2px);
+}
+
+/* Episode card special hover */
+article[data-category="studies"]:hover img {
+  filter: grayscale(0);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Stagger animation for grid items */
+section {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Red glow effect on primary elements */
+.bg-primary {
+  box-shadow: 0 0 30px rgba(196, 30, 58, 0.3);
+}
+
+.bg-primary:hover {
+  box-shadow: 0 0 40px rgba(196, 30, 58, 0.5);
+}
+
+/* Border pulse animation */
+@keyframes borderPulse {
+
+  0%,
+  100% {
+    border-color: rgba(196, 30, 58, 0.3);
+  }
+
+  50% {
+    border-color: rgba(196, 30, 58, 0.6);
+  }
+}
+
+.border-primary\/30:hover {
+  animation: borderPulse 2s ease-in-out infinite;
+}
+
+/* Typography refinements */
+.font-serif {
+  font-feature-settings: "liga" 1, "kern" 1;
+}
+
+.font-mono {
+  font-feature-settings: "tnum" 1;
+}
+
+/* Selection color */
+::selection {
+  background: #c41e3a;
+  color: white;
+}
+
+/* Focus states */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #c41e3a;
+  outline-offset: 2px;
+}
+
+/* Image loading state */
+img {
+  background: #141414;
+}
+
+/* Mobile menu (if needed later) */
+@media (max-width: 1023px) {
+  .main-nav {
+    display: none;
+  }
+}
+
+/* ================================================
+   PAGE TRANSITIONS
+   ================================================ */
+
+/* Page fade-in on load */
+.page-enter {
+  animation: pageEnter 0.6s ease-out forwards;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================================
+   SCROLL-TRIGGERED ANIMATIONS
+   ================================================ */
+
+/* Elements that animate when scrolled into view */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered reveal for grid items */
+.scroll-reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal-stagger.visible > *:nth-child(1) { transition-delay: 0.05s; }
+.scroll-reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.1s; }
+.scroll-reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.15s; }
+.scroll-reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.2s; }
+.scroll-reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.25s; }
+.scroll-reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.3s; }
+.scroll-reveal-stagger.visible > *:nth-child(7) { transition-delay: 0.35s; }
+.scroll-reveal-stagger.visible > *:nth-child(8) { transition-delay: 0.4s; }
+
+.scroll-reveal-stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Print styles */
+@media print {
+
+  .bg-noise,
+  header,
+  footer,
+  button {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+}

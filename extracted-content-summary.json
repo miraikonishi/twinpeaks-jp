@@ -1,0 +1,92 @@
+{
+  "extractionDate": "2025-12-17",
+  "sourceUrl": "https://twinpeaks.jp",
+  "status": "completed",
+  "summary": {
+    "totalArticles": 33,
+    "categoriesExtracted": 7
+  },
+  "content": {
+    "studies": {
+      "episodes": [
+        {"id": "ep1", "url": "https://twinpeaks.jp/studies/ep1/", "title": "第1話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 4500},
+        {"id": "ep2", "url": "https://twinpeaks.jp/studies/ep2/", "title": "第2話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 5000},
+        {"id": "ep3", "url": "https://twinpeaks.jp/studies/ep3/", "title": "第3話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 5500},
+        {"id": "ep4", "url": "https://twinpeaks.jp/studies/ep4/", "title": "第4話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 3000},
+        {"id": "ep5", "url": "https://twinpeaks.jp/studies/ep5/", "title": "第5話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 3000},
+        {"id": "ep6", "url": "https://twinpeaks.jp/studies/ep6/", "title": "第6話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 3000},
+        {"id": "ep7", "url": "https://twinpeaks.jp/studies/ep7/", "title": "第7話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 2500},
+        {"id": "ep8", "url": "https://twinpeaks.jp/studies/ep8/", "title": "第8話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 3500},
+        {"id": "ep9", "url": "https://twinpeaks.jp/studies/ep9/", "title": "第9話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 3000},
+        {"id": "ep10", "url": "https://twinpeaks.jp/studies/ep10/", "title": "第10話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 2500},
+        {"id": "ep11", "url": "https://twinpeaks.jp/studies/ep11/", "title": "第11話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 5000},
+        {"id": "ep12", "url": "https://twinpeaks.jp/studies/ep12/", "title": "第12話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 3500},
+        {"id": "ep13", "url": "https://twinpeaks.jp/studies/ep13/", "title": "第13話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 5000},
+        {"id": "ep14", "url": "https://twinpeaks.jp/studies/ep14/", "title": "第14話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 3000},
+        {"id": "ep15", "url": "https://twinpeaks.jp/studies/ep15/", "title": "第15話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 2500},
+        {"id": "ep16", "url": "https://twinpeaks.jp/studies/ep16/", "title": "第16話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 6000},
+        {"id": "ep17", "url": "https://twinpeaks.jp/studies/ep17/", "title": "第17話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 3000},
+        {"id": "ep18", "url": "https://twinpeaks.jp/studies/ep18/", "title": "第18話ネタバレ解説", "status": "full_text_extracted", "estimatedChars": 2500}
+      ],
+      "essays": [
+        {"id": "ep-movie", "url": "https://twinpeaks.jp/studies/ep-movie/", "title": "デビッド・リンチの瞑想映画", "status": "full_text_extracted"},
+        {"id": "ep-lynch", "url": "https://twinpeaks.jp/studies/ep-lynch/", "title": "デビッド・リンチの統一場", "status": "full_text_extracted"},
+        {"id": "electricity-fire", "url": "https://twinpeaks.jp/studies/electricity-fire/", "title": "電気と火について", "status": "full_text_extracted"}
+      ]
+    },
+    "guide": [
+      {"id": "guide1", "url": "https://twinpeaks.jp/aypgtp/1/", "title": "初級者ガイド その1", "status": "full_text_extracted"},
+      {"id": "guide2", "url": "https://twinpeaks.jp/aypgtp/2/", "title": "初級者ガイド その2 - 登場人物", "status": "full_text_extracted"},
+      {"id": "guide3", "url": "https://twinpeaks.jp/aypgtp/3/", "title": "初級者ガイド その3 - リンチプロフィール", "status": "full_text_extracted"},
+      {"id": "guide4", "url": "https://twinpeaks.jp/aypgtp/4/", "title": "初級者ガイド その4 - フィルモグラフィー", "status": "full_text_extracted"},
+      {"id": "guide5", "url": "https://twinpeaks.jp/aypgtp/5/", "title": "初級者ガイド その5 - 謎と引用", "status": "full_text_extracted"}
+    ],
+    "lynch": [
+      {"id": "lynchgraphy", "url": "https://twinpeaks.jp/lynchzone/lynchgraphy/", "title": "LYNCHGRAPHY タイムライン", "status": "full_text_extracted"},
+      {"id": "lynchworks", "url": "https://twinpeaks.jp/lynchzone/lynchworks/", "title": "LYNCHWORKS 全仕事", "status": "full_text_extracted"}
+    ],
+    "gourmet": [
+      {"id": "cherrypie", "url": "https://twinpeaks.jp/tp-gourmet/cherrypie/", "title": "チェリーパイレシピ", "status": "video_link_only", "note": "YouTube動画埋め込みのみ"}
+    ],
+    "travel": [
+      {"id": "mulholland", "url": "https://twinpeaks.jp/travel/mulholland-drive-tour/", "title": "マルホランド・ドライブツアー同行記", "status": "full_text_extracted"}
+    ],
+    "bluray": [
+      {"id": "z2a-review1", "url": "https://twinpeaks.jp/bluray/z2a-review1/", "title": "From Z to A 特典映像レビュー その1", "status": "full_text_extracted"},
+      {"id": "z2a-review2", "url": "https://twinpeaks.jp/bluray/z2a-review2/", "title": "From Z to A 特典映像レビュー その2", "status": "full_text_extracted"}
+    ],
+    "other": [
+      {"id": "red-curtain", "url": "https://twinpeaks.jp/twinpeaks/red-curtain-wall-paper/", "title": "レッドカーテン壁紙", "status": "not_extracted", "note": "画像コンテンツのみの可能性"}
+    ]
+  },
+  "comparison": {
+    "currentDataJs": {
+      "studies": 18,
+      "guide": 2,
+      "lynch": 2,
+      "gourmet": 1,
+      "travel": 1,
+      "essays": 3,
+      "bluray": 0
+    },
+    "originalSite": {
+      "studies": 18,
+      "essays": 3,
+      "guide": 5,
+      "lynch": 2,
+      "gourmet": 1,
+      "travel": 1,
+      "bluray": 2
+    },
+    "contentQuality": {
+      "currentDataJs": "summary_only",
+      "extracted": "full_text"
+    }
+  },
+  "nextSteps": [
+    "data.jsの各記事をフルテキストで更新",
+    "Beginner's Guide 3-5を追加",
+    "Blu-ray Reviewsセクションを追加",
+    "カテゴリ構造の見直し"
+  ]
+}

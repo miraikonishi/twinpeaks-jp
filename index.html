@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Twin Peaks Japan - It is happening again.</title>
+  <!-- Fonts: Bebas Neue for hero, Inter for English, Noto Sans JP for Japanese, IBM Plex Mono for labels -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Tailwind CSS (via CDN for mockup fidelity) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#c41e3a",
+            "primary-dark": "#8B0000",
+            "lodge-red": "#c41e3a",
+            "background-light": "#f6f8f7",
+            "background-dark": "#0c0c0c",
+            "surface-dark": "#141414",
+            "surface-darker": "#0a0a0a",
+            "text-main": "#e8e8e8",
+            "text-muted": "#888888",
+            "accent-gold": "#d4a574",
+            "accent-cream": "#f5f0e6",
+          },
+          fontFamily: {
+            "mono": ["IBM Plex Mono", "monospace"],
+            "hero": ["Bebas Neue", "sans-serif"],
+            "display": ["Inter", "Noto Sans JP", "sans-serif"],
+            "body": ["Noto Sans JP", "Inter", "sans-serif"],
+          },
+          letterSpacing: {
+            "widest-plus": "0.2em",
+          }
+        },
+      },
+    }
+  </script>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark font-body text-text-main antialiased selection:bg-primary selection:text-white">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

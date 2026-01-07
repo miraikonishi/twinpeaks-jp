@@ -1,0 +1,92 @@
+[
+  {
+    "id": "ep1",
+    "oldImage": "/images/2017/04/loglady-1.jpg",
+    "newImage": "/images/episodes/ep1_thumb.jpg"
+  },
+  {
+    "id": "ep2",
+    "oldImage": "/images/2017/04/inthelodge.jpg",
+    "newImage": "/images/episodes/ep2_thumb.jpg"
+  },
+  {
+    "id": "ep3",
+    "oldImage": "/images/2017/04/cooper.jpg",
+    "newImage": "/images/episodes/ep3_thumb.jpg"
+  },
+  {
+    "id": "ep8",
+    "oldImage": "/images/2017/04/killerbob.png",
+    "newImage": "/images/episodes/ep8_thumb.jpg"
+  },
+  {
+    "id": "ep4",
+    "oldImage": "/images/2017/04/cooper.jpg",
+    "newImage": "/images/episodes/ep4_thumb.jpg"
+  },
+  {
+    "id": "ep5",
+    "oldImage": "/images/2017/04/redroom.jpg",
+    "newImage": "/images/episodes/ep5_thumb.jpg"
+  },
+  {
+    "id": "ep6",
+    "oldImage": "/images/2017/04/killerbob.png",
+    "newImage": "/images/episodes/ep6_thumb.jpg"
+  },
+  {
+    "id": "ep7",
+    "oldImage": "/images/2017/04/cooper.jpg",
+    "newImage": "/images/episodes/ep7_thumb.jpg"
+  },
+  {
+    "id": "ep9",
+    "oldImage": "/images/2017/04/redroom.jpg",
+    "newImage": "/images/episodes/ep9_thumb.jpg"
+  },
+  {
+    "id": "ep10",
+    "oldImage": "/images/2017/04/cooper.jpg",
+    "newImage": "/images/episodes/ep10_thumb.jpg"
+  },
+  {
+    "id": "ep11",
+    "oldImage": "/images/2017/04/welcome.png",
+    "newImage": "/images/episodes/ep11_thumb.jpg"
+  },
+  {
+    "id": "ep12",
+    "oldImage": "/images/2017/04/redroom.jpg",
+    "newImage": "/images/episodes/ep12_thumb.jpg"
+  },
+  {
+    "id": "ep13",
+    "oldImage": "/images/2017/04/killerbob.png",
+    "newImage": "/images/episodes/ep13_thumb.jpg"
+  },
+  {
+    "id": "ep14",
+    "oldImage": "/images/2017/04/cooper.jpg",
+    "newImage": "/images/episodes/ep14_thumb.jpg"
+  },
+  {
+    "id": "ep15",
+    "oldImage": "/images/2017/04/redroom.jpg",
+    "newImage": "/images/episodes/ep15_thumb.jpg"
+  },
+  {
+    "id": "ep16",
+    "oldImage": "/images/2017/04/cooper.jpg",
+    "newImage": "/images/episodes/ep16_thumb.jpg"
+  },
+  {
+    "id": "ep17",
+    "oldImage": "/images/2017/04/welcome.png",
+    "newImage": "/images/episodes/ep17_thumb.jpg"
+  },
+  {
+    "id": "ep18",
+    "oldImage": "/images/2017/04/cooper.jpg",
+    "newImage": "/images/episodes/ep18_thumb.jpg"
+  }
+]
