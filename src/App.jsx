@@ -15,14 +15,9 @@ const ScrollToTop = () => {
     return null;
 };
 
-// Page transition wrapper
+// Page wrapper
 const PageWrapper = ({ children }) => {
-    const { pathname } = useLocation();
-    return (
-        <div key={pathname} className="page-enter">
-            {children}
-        </div>
-    );
+    return <>{children}</>;
 };
 
 function App() {
@@ -79,6 +74,44 @@ function App() {
                     </div>
                 </header>
 
+                {/* Mobile Menu */}
+                {mobileMenuOpen && (
+                    <div className="fixed inset-0 z-50 lg:hidden">
+                        <div className="absolute inset-0 bg-black/80" onClick={() => setMobileMenuOpen(false)}></div>
+                        <nav className="absolute top-0 right-0 h-full w-64 bg-surface-darker border-l border-white/10 p-6 pt-20">
+                            <button
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="absolute top-4 right-4 text-white/50 hover:text-white p-2"
+                            >
+                                <span className="material-symbols-outlined">close</span>
+                            </button>
+                            <div className="flex flex-col gap-4">
+                                <Link
+                                    to="/episodes"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="font-gothic text-lg text-white/70 hover:text-white transition-colors py-2"
+                                >
+                                    エピソード
+                                </Link>
+                                <Link
+                                    to="/library"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="font-gothic text-lg text-white/70 hover:text-white transition-colors py-2"
+                                >
+                                    資料室
+                                </Link>
+                                <Link
+                                    to="/black-lodge"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="font-gothic text-lg text-white/70 hover:text-white transition-colors py-2"
+                                >
+                                    ブラックロッジ
+                                </Link>
+                            </div>
+                        </nav>
+                    </div>
+                )}
+
                 {/* Search Overlay (Placeholder functionality) */}
                 <div id="search-container" className={`fixed top-14 left-0 w-full bg-surface-darker/98 backdrop-blur-md border-b border-primary/20 p-6 transform transition-transform duration-300 z-30 shadow-2xl ${isSearchOpen ? 'translate-y-0' : '-translate-y-[150%]'}`}>
                     <div className="max-w-3xl mx-auto">
@@ -103,34 +136,11 @@ function App() {
                 </main>
 
                 {/* Footer */}
-                <footer className="border-t border-white/5 bg-surface-darker px-6 py-16 lg:px-8 mt-auto">
-                    <div className="max-w-6xl mx-auto">
-                        <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
-                            <div>
-                                <div className="flex items-center gap-3 mb-4">
-                                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                    <span className="font-mono text-xs uppercase tracking-widest text-white/70">Twin Peaks Japan</span>
-                                </div>
-                                <p className="font-body text-base text-white/40 italic max-w-xs">
-                                    "The owls are not what they seem."
-                                </p>
-                            </div>
-                            <div className="flex gap-12">
-                                <div>
-                                    <h4 className="font-mono text-[10px] uppercase tracking-widest text-white/30 mb-4">Archive</h4>
-                                    <ul className="space-y-2">
-                                        <li><Link to="/episodes" className="nav-link font-body text-sm text-white/50 hover:text-primary transition-colors">エピソード</Link></li>
-                                        <li><Link to="/library" className="nav-link font-body text-sm text-white/50 hover:text-primary transition-colors">資料室</Link></li>
-                                        <li><Link to="/black-lodge" className="nav-link font-body text-sm text-white/50 hover:text-primary transition-colors">ブラックロッジ</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="pt-8 border-t border-white/5">
-                            <p className="font-mono text-[10px] text-white/20 uppercase tracking-wider text-center">
-                                A fan tribute. Not affiliated with Showtime or David Lynch.
-                            </p>
-                        </div>
+                <footer className="border-t border-white/5 bg-surface-darker px-6 py-10 lg:px-8 mt-auto">
+                    <div className="max-w-6xl mx-auto text-center">
+                        <p className="font-mono text-[10px] text-white/20 uppercase tracking-wider">
+                            A fan tribute. Not affiliated with Showtime or David Lynch.
+                        </p>
                     </div>
                 </footer>
             </div>

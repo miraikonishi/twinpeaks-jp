@@ -5,50 +5,29 @@ import { Link } from 'react-router-dom';
 
 const BlackLodge = () => {
     return (
-        <section className="relative w-full min-h-screen">
+        <section className="mt-14 py-16 px-6 relative min-h-screen">
+            {/* Subtle red curtain background - consistent with Episodes */}
+            <div className="absolute inset-0 opacity-30 red-curtain-full pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-background-dark via-transparent to-background-dark pointer-events-none"></div>
 
-            {/* --- Hero Section --- */}
-            <div className="relative h-[60vh] flex flex-col items-center justify-center overflow-hidden border-b border-primary/20">
-                {/* Background: Abstract Red Room Feel */}
-                <div className="absolute inset-0 bg-surface-darker"></div>
-                <div className="absolute inset-0 opacity-20 red-curtain-full"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-surface-darker via-transparent to-black/60"></div>
+            <div className="max-w-6xl mx-auto relative z-10">
+                <Link to="/" className="mb-8 font-body text-xs text-white/40 hover:text-white transition-colors flex items-center gap-2">
+                    <span>← ホームへ</span>
+                </Link>
 
-                {/* Chevron Floor Pattern Overlay - Black Lodge signature */}
-                <div className="zigzag-floor opacity-20"></div>
-
-                <div className="relative z-10 text-center px-6 mt-14">
-                    <p className="font-body text-xs md:text-sm tracking-[0.3em] text-primary mb-4 animate-fade-in">ようこそ</p>
-                    <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-widest mb-6 drop-shadow-2xl animate-fade-in-up">
-                        ブラックロッジ
-                    </h1>
-                    <p className="font-mono text-xs text-white/40 tracking-wider mb-6">Black Lodge</p>
-                    <div className="h-px w-24 bg-primary mx-auto mb-6"></div>
-                    <p className="font-body text-white/60 text-sm md:text-base max-w-md mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                        ツイン・ピークスの世界を巡るロケ地とグルメ<br />
-                        <span className="italic text-white/30">"I'll see you in 25 years."</span>
-                    </p>
-                </div>
-            </div>
-
-            {/* --- Main Content --- */}
-            <div className="max-w-7xl mx-auto px-6 py-20">
-                <div className="mb-12">
-                    <Link to="/" className="inline-flex items-center gap-2 font-body text-xs text-white/30 hover:text-white transition-colors tracking-wide">
-                        ← ホームへ
-                    </Link>
+                <div className="mb-16">
+                    <h1 className="font-gothic text-3xl md:text-4xl font-semibold text-white mb-2">ブラックロッジ</h1>
+                    <p className="font-body text-white/50 text-sm mb-1">ツイン・ピークスの世界を巡るロケ地とグルメ</p>
+                    <p className="font-mono text-xs text-white/40 tracking-wider">Black Lodge</p>
                 </div>
 
-                <div className="space-y-32">
+                <div className="space-y-24">
 
-                    {/* I. LOCATIONS (Travel) - ZigZag Layout */}
+                    {/* I. LOCATIONS (Travel) */}
                     <div id="travel">
-                        <div className="flex items-end justify-between border-b border-white/10 pb-4 mb-12">
-                            <div>
-                                <h2 className="font-display text-4xl text-white mb-1">ロケ地</h2>
-                                <p className="font-body text-xs text-primary tracking-wide">ツイン・ピークスの舞台を巡る</p>
-                            </div>
-                            <span className="font-mono text-[10px] text-white/30">01</span>
+                        <div className="mb-10">
+                            <h2 className="font-gothic text-2xl font-semibold text-white mb-1">ロケ地</h2>
+                            <p className="font-body text-xs text-white/40">ツイン・ピークスの舞台を巡る</p>
                         </div>
 
                         <div className="space-y-0">
@@ -56,49 +35,37 @@ const BlackLodge = () => {
                                 <ZigZagCard
                                     key={item.id}
                                     item={item}
-                                    category="Travel Log"
                                     reversed={index % 2 !== 0}
                                 />
                             ))}
                         </div>
                     </div>
 
-                    {/* II. CULTURE & ARCHIVES - 2 Column Layout */}
+                    {/* II. CULTURE & ARCHIVES */}
                     <div id="culture-archives">
-                        <div className="flex items-end justify-between border-b border-white/10 pb-4 mb-12">
-                            <div>
-                                <h2 className="font-display text-4xl text-white mb-1">カルチャー</h2>
-                                <p className="font-body text-xs text-primary tracking-wide">ツイン・ピークスの味と記録</p>
-                            </div>
-                            <span className="font-mono text-[10px] text-white/30">02</span>
+                        <div className="mb-10">
+                            <h2 className="font-gothic text-2xl font-semibold text-white mb-1">カルチャー</h2>
+                            <p className="font-body text-xs text-white/40">ツイン・ピークスの味と記録</p>
                         </div>
 
                         <div className="grid lg:grid-cols-12 gap-12">
 
-                            {/* Left Col: Gourmet (Menu) - Span 5 */}
-                            <div className="lg:col-span-5 flex flex-col gap-6">
-                                <h3 className="font-body text-xs text-white/40 tracking-wide mb-2 flex items-center gap-2">
-                                    <span className="w-2 h-2 bg-primary/50 rounded-full"></span>
-                                    グルメ
-                                </h3>
-                                <div className="flex-1 bg-black/20 p-6 rounded-lg border border-white/5 h-full">
-                                    <div className="space-y-6">
-                                        {(database.gourmet || []).map((item) => (
-                                            <MenuCard key={item.id} item={item} category="Recipe" />
-                                        ))}
-                                    </div>
+                            {/* Left Col: Gourmet */}
+                            <div className="lg:col-span-5 flex flex-col gap-4">
+                                <h3 className="font-body text-xs text-white/40 tracking-wide">グルメ</h3>
+                                <div className="space-y-4">
+                                    {(database.gourmet || []).map((item) => (
+                                        <MenuCard key={item.id} item={item} />
+                                    ))}
                                 </div>
                             </div>
 
-                            {/* Right Col: Archives (Grid) - Span 7 */}
-                            <div className="lg:col-span-7 flex flex-col gap-6">
-                                <h3 className="font-body text-xs text-white/40 tracking-wide mb-2 flex items-center gap-2">
-                                    <span className="w-2 h-2 bg-white/20 rounded-full"></span>
-                                    アーカイブ
-                                </h3>
-                                <div className="grid sm:grid-cols-2 gap-6">
+                            {/* Right Col: Archives */}
+                            <div className="lg:col-span-7 flex flex-col gap-4">
+                                <h3 className="font-body text-xs text-white/40 tracking-wide">アーカイブ</h3>
+                                <div className="grid sm:grid-cols-2 gap-4">
                                     {(database.bluray || []).map((item) => (
-                                        <DossierCard key={item.id} item={item} category="Review" />
+                                        <DossierCard key={item.id} item={item} />
                                     ))}
                                 </div>
                             </div>

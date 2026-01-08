@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export const BeginnerCard = ({ item, index, category = 'Guide' }) => {
     return (
         <Link to={`/article/${item.id}`} className="block h-full">
-            <article className="group relative rounded-xl overflow-hidden cursor-pointer bg-surface-dark border border-white/5 hover:border-primary/30 transition-all h-full">
+            <article className="group relative rounded-lg overflow-hidden cursor-pointer bg-surface-dark border border-white/5 hover:border-primary/30 transition-all h-full">
                 <div className="aspect-[16/9] w-full overflow-hidden">
                     <img
                         src={item.image}
@@ -13,22 +13,18 @@ export const BeginnerCard = ({ item, index, category = 'Guide' }) => {
                         className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                     />
                 </div>
-                <div className="p-6">
+                <div className="p-5">
                     <div className="flex items-center gap-3 mb-3">
                         <span className="font-mono text-[10px] tracking-widest text-primary uppercase">
                             {category} {String(index + 1).padStart(2, '0')}
                         </span>
                     </div>
-                    <h3 className="font-display text-xl font-bold text-white group-hover:text-primary transition-colors mb-2">
+                    <h3 className="font-gothic text-lg font-semibold text-white group-hover:text-primary transition-colors mb-2">
                         {item.title}
                     </h3>
                     <p className="font-body text-sm text-white/50 line-clamp-2 leading-relaxed">
                         {item.excerpt}
                     </p>
-                    <div className="mt-4 flex items-center gap-2 text-xs font-mono text-white/30 group-hover:text-primary transition-colors">
-                        <span>Read more</span>
-                        <span className="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </div>
                 </div>
             </article>
         </Link>
@@ -57,7 +53,6 @@ export const EpisodeCard = ({ item }) => {
                     <h3 className="font-hero text-3xl text-white group-hover:text-primary transition-colors">
                         {String(partNum).padStart(2, '0')}
                     </h3>
-                    {/* Title overlay on hover */}
                     <p className="font-body text-xs text-white/0 group-hover:text-white/80 transition-all duration-500 mt-2 line-clamp-2 leading-relaxed">
                         {item.title}
                     </p>
@@ -72,7 +67,7 @@ export const EpisodeCard = ({ item }) => {
 export const ProfileCard = ({ item }) => {
     return (
         <Link to={`/article/${item.id}`} className="block h-full">
-            <article className="group relative rounded-xl overflow-hidden cursor-pointer bg-surface-dark h-full">
+            <article className="group relative rounded-lg overflow-hidden cursor-pointer bg-surface-dark h-full">
                 <div className="flex flex-col md:flex-row h-full">
                     <div className="md:w-1/3 aspect-[3/4] md:aspect-auto overflow-hidden">
                         <img
@@ -81,18 +76,14 @@ export const ProfileCard = ({ item }) => {
                             className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-500"
                         />
                     </div>
-                    <div className="flex-1 p-6 flex flex-col justify-center">
+                    <div className="flex-1 p-5 flex flex-col justify-center">
                         <span className="font-mono text-[10px] tracking-widest text-white/30 uppercase mb-3">Profile</span>
-                        <h3 className="font-display text-2xl font-bold text-white group-hover:text-primary transition-colors mb-3">
+                        <h3 className="font-gothic text-xl font-semibold text-white group-hover:text-primary transition-colors mb-3">
                             {item.title}
                         </h3>
-                        <p className="font-body text-sm text-white/50 line-clamp-3 leading-relaxed mb-4">
+                        <p className="font-body text-sm text-white/50 line-clamp-3 leading-relaxed">
                             {item.excerpt}
                         </p>
-                        <div className="flex items-center gap-2 text-xs font-mono text-white/30 group-hover:text-primary transition-colors">
-                            <span>View profile</span>
-                            <span className="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                        </div>
                     </div>
                 </div>
             </article>
@@ -101,10 +92,10 @@ export const ProfileCard = ({ item }) => {
 };
 
 // Generic Dossier Card
-export const DossierCard = ({ item, category }) => {
+export const DossierCard = ({ item }) => {
     return (
         <Link to={`/article/${item.id}`} className="block h-full">
-            <article className="group relative rounded-xl overflow-hidden cursor-pointer bg-surface-dark border border-white/5 hover:border-primary/30 transition-all h-full">
+            <article className="group relative rounded-lg overflow-hidden cursor-pointer bg-surface-dark border border-white/5 hover:border-primary/30 transition-all h-full">
                 <div className="flex">
                     <div className="w-1/3 aspect-[4/3] overflow-hidden">
                         <img
@@ -113,20 +104,13 @@ export const DossierCard = ({ item, category }) => {
                             className="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                         />
                     </div>
-                    <div className="flex-1 p-5 flex flex-col justify-center">
-                        <div className="flex items-center gap-2 mb-2">
-                            <span className="font-mono text-[10px] tracking-widest text-primary uppercase">{category}</span>
-                        </div>
-                        <h3 className="font-display text-lg font-bold text-white group-hover:text-primary transition-colors mb-2 line-clamp-2">
+                    <div className="flex-1 p-4 flex flex-col justify-center">
+                        <h3 className="font-gothic text-base font-semibold text-white group-hover:text-primary transition-colors mb-2 line-clamp-2">
                             {item.title}
                         </h3>
-                        <p className="font-body text-sm text-white/40 line-clamp-2 leading-relaxed">
+                        <p className="font-body text-xs text-white/40 line-clamp-2 leading-relaxed">
                             {item.excerpt}
                         </p>
-                        <div className="mt-3 flex items-center gap-2 text-xs font-mono text-white/30 group-hover:text-primary transition-colors">
-                            <span>Read more</span>
-                            <span className="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                        </div>
                     </div>
                 </div>
             </article>
@@ -135,10 +119,10 @@ export const DossierCard = ({ item, category }) => {
 };
 
 // ZigZag Card - For Travel Section (Alternating layout)
-export const ZigZagCard = ({ item, category, reversed }) => {
+export const ZigZagCard = ({ item, reversed }) => {
     return (
-        <Link to={`/article/${item.id}`} className="block group mb-16 last:mb-0">
-            <article className={`flex flex-col md:flex-row ${reversed ? 'md:flex-row-reverse' : ''} gap-8 items-center`}>
+        <Link to={`/article/${item.id}`} className="block group mb-12 last:mb-0">
+            <article className={`flex flex-col md:flex-row ${reversed ? 'md:flex-row-reverse' : ''} gap-6 items-center`}>
                 <div className="w-full md:w-3/5 overflow-hidden rounded-lg">
                     <div className="aspect-[16/9] relative overflow-hidden">
                         <img
@@ -150,58 +134,37 @@ export const ZigZagCard = ({ item, category, reversed }) => {
                     </div>
                 </div>
                 <div className="w-full md:w-2/5 flex flex-col justify-center">
-                    <span className="font-mono text-[10px] tracking-widest text-primary uppercase mb-3 flex items-center gap-2">
-                        <span className="w-8 h-px bg-primary"></span>
-                        {category}
-                    </span>
-                    <h3 className="font-display text-3xl font-bold text-white group-hover:text-primary transition-colors mb-4">
+                    <h3 className="font-gothic text-2xl font-semibold text-white group-hover:text-primary transition-colors mb-3">
                         {item.title}
                     </h3>
-                    <p className="font-body text-sm text-white/60 leading-relaxed mb-6">
+                    <p className="font-body text-sm text-white/50 leading-relaxed">
                         {item.excerpt}
                     </p>
-                    <div className="flex items-center gap-2 text-xs font-mono text-white/40 group-hover:text-white transition-colors uppercase tracking-wider">
-                        <span>Explore Location</span>
-                        <span className="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </div>
                 </div>
             </article>
         </Link>
     );
 };
 
-// Menu Card - For Gourmet Section (Diner Menu Style)
-export const MenuCard = ({ item, category }) => {
+// Menu Card - For Gourmet Section (Simple style)
+export const MenuCard = ({ item }) => {
     return (
-        <Link to={`/article/${item.id}`} className="block h-full group">
-            <article className="h-full bg-surface-darker border border-white/5 p-1 rounded hover:border-primary/30 transition-colors">
-                <div className="h-full border border-white/5 p-5 flex gap-4 items-start relative overflow-hidden">
-                    {/* Decorative dots background */}
-                    <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '8px 8px' }}></div>
-
-                    <div className="w-24 h-24 flex-shrink-0 rounded overflow-hidden mt-1">
-                        <img
-                            src={item.image}
-                            alt={item.title}
-                            className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all"
-                        />
-                    </div>
-                    <div className="flex-1 relative z-10">
-                        <div className="flex justify-between items-start mb-1">
-                            <h3 className="font-display text-lg font-bold text-white group-hover:text-primary transition-colors">
-                                {item.title}
-                            </h3>
-                            {/* Fake price for style */}
-                            <span className="font-mono text-xs text-primary font-bold">$??.??</span>
-                        </div>
-                        <div className="w-full h-px bg-white/10 mb-2 border-b border-dashed border-white/20"></div>
-                        <p className="font-body text-xs text-white/50 leading-relaxed line-clamp-3">
-                            {item.excerpt}
-                        </p>
-                        <div className="mt-3 inline-block px-2 py-1 border border-white/10 rounded text-[10px] font-mono text-white/40 uppercase tracking-wider group-hover:border-primary/30 group-hover:text-primary transition-colors">
-                            View Recipe
-                        </div>
-                    </div>
+        <Link to={`/article/${item.id}`} className="block group">
+            <article className="bg-surface-dark border border-white/5 hover:border-primary/30 transition-colors rounded-lg p-4 flex gap-4 items-start">
+                <div className="w-20 h-20 flex-shrink-0 rounded overflow-hidden">
+                    <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all"
+                    />
+                </div>
+                <div className="flex-1">
+                    <h3 className="font-gothic text-base font-semibold text-white group-hover:text-primary transition-colors mb-1">
+                        {item.title}
+                    </h3>
+                    <p className="font-body text-xs text-white/40 leading-relaxed line-clamp-2">
+                        {item.excerpt}
+                    </p>
                 </div>
             </article>
         </Link>

@@ -18,7 +18,7 @@ const Home = () => {
             </div>
 
             {/* Main Content Container */}
-            <div className="relative z-20 w-full max-w-7xl mx-auto px-6 flex flex-col items-center justify-center h-full gap-12 lg:gap-20">
+            <div className="relative z-20 w-full max-w-7xl mx-auto px-6 flex flex-col items-center justify-center h-full gap-8 lg:gap-10">
 
                 {/* Title & Quote Section */}
                 <div className="text-center max-w-4xl mx-auto">
@@ -43,9 +43,9 @@ const Home = () => {
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                         <div className="relative z-10 text-center p-4">
-                            <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-2 tracking-wider group-hover:text-primary transition-colors duration-300">The Return</h3>
+                            <h3 className="font-gothic text-xl md:text-2xl font-semibold text-white/80 mb-2 tracking-wider group-hover:text-primary transition-colors duration-300">The Return</h3>
                             <div className="h-px w-8 bg-white/20 mx-auto mb-2 group-hover:w-16 group-hover:bg-primary/50 transition-all duration-500"></div>
-                            <p className="font-body text-[11px] tracking-wide text-white/40 group-hover:text-white/70 transition-colors duration-300">エピソード解説</p>
+                            <p className="font-body text-[10px] tracking-wide text-white/30 group-hover:text-white/50 transition-colors duration-300">エピソード解説</p>
                         </div>
                     </Link>
 
@@ -54,9 +54,9 @@ const Home = () => {
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                         <div className="relative z-10 text-center p-4">
-                            <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-2 tracking-wider group-hover:text-primary transition-colors duration-300">資料室</h3>
+                            <h3 className="font-gothic text-xl md:text-2xl font-semibold text-white/80 mb-2 tracking-wider group-hover:text-primary transition-colors duration-300">資料室</h3>
                             <div className="h-px w-8 bg-white/20 mx-auto mb-2 group-hover:w-16 group-hover:bg-primary/50 transition-all duration-500"></div>
-                            <p className="font-body text-[11px] tracking-wide text-white/40 group-hover:text-white/70 transition-colors duration-300">入門・リンチ・考察</p>
+                            <p className="font-body text-[10px] tracking-wide text-white/30 group-hover:text-white/50 transition-colors duration-300">入門・リンチ・考察</p>
                         </div>
                     </Link>
 
@@ -65,7 +65,7 @@ const Home = () => {
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                         <div className="relative z-10 text-center p-4">
-                            <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-2 tracking-wider group-hover:text-primary transition-colors duration-300">ブラックロッジ</h3>
+                            <h3 className="font-gothic text-xl md:text-2xl font-semibold text-white/80 mb-2 tracking-wider group-hover:text-primary transition-colors duration-300">ブラックロッジ</h3>
                             <div className="h-px w-8 bg-white/20 mx-auto mb-2 group-hover:w-16 group-hover:bg-primary/50 transition-all duration-500"></div>
                             <p className="font-body text-[11px] tracking-wide text-white/40 group-hover:text-white/70 transition-colors duration-300">ロケ地・グルメ</p>
                         </div>

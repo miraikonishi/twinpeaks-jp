@@ -73,7 +73,7 @@ const Article = () => {
             <span className="font-mono text-[10px] text-white/30 uppercase">ID: {article.id}</span>
           </div>
 
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-accent-gold leading-tight mb-2">
+          <h1 className="font-gothic text-3xl md:text-4xl font-semibold text-white leading-tight mb-2">
             {article.title}
           </h1>
 

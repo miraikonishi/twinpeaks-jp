@@ -23,18 +23,14 @@ const DailyQuote = () => {
     if (!quote) return null;
 
     return (
-        <div className="py-12 flex justify-center">
-            <div className="max-w-2xl text-center px-6">
-                <p className="font-display text-2xl md:text-3xl font-medium text-white/50 italic mb-4 leading-relaxed">
+        <div className="pt-6 flex justify-center">
+            <div className="max-w-xl text-center px-6">
+                <p className="font-display text-lg md:text-xl font-normal text-white/40 italic leading-relaxed">
                     "{quote.text}"
                 </p>
-                <div className="flex items-center justify-center gap-3">
-                    <div className="h-px w-8 bg-primary/30"></div>
-                    <p className="font-mono text-xs uppercase tracking-widest text-primary/70">
-                        {quote.source}
-                    </p>
-                    <div className="h-px w-8 bg-primary/30"></div>
-                </div>
+                <p className="font-mono text-[10px] uppercase tracking-widest text-white/25 mt-2">
+                    — {quote.source}
+                </p>
             </div>
         </div>
     );
