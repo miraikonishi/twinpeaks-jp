@@ -5,7 +5,7 @@ backend:
   name: github
   repo: miraikonishi/twinpeaks-jp
   branch: main
-  base_url: https://sveltia-cms-auth.netlify.app
+  base_url: https://sveltia-cms-auth.contact-0a3.workers.dev
 
 locale: ja
 
