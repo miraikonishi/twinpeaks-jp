@@ -1,7 +1,6 @@
-// Data loader that combines legacy data with CMS content
-import { database as legacyDatabase } from './data.js';
+// Data loader - loads all content from JSON files
+// Managed by Sveltia CMS
 
-// Load all JSON files from content directories using Vite's glob import
 const studiesFiles = import.meta.glob('../content/studies/*.json', { eager: true, import: 'default' });
 const guideFiles = import.meta.glob('../content/guide/*.json', { eager: true, import: 'default' });
 const essaysFiles = import.meta.glob('../content/essays/*.json', { eager: true, import: 'default' });
@@ -13,13 +12,12 @@ const blurayFiles = import.meta.glob('../content/bluray/*.json', { eager: true, 
 // Convert glob imports to arrays
 const extractItems = (files) => Object.values(files);
 
-// Merge legacy data with CMS content
 export const database = {
-    studies: [...(legacyDatabase.studies || []), ...extractItems(studiesFiles)],
-    guide: [...(legacyDatabase.guide || []), ...extractItems(guideFiles)],
-    essays: [...(legacyDatabase.essays || []), ...extractItems(essaysFiles)],
-    lynch: [...(legacyDatabase.lynch || []), ...extractItems(lynchFiles)],
-    travel: [...(legacyDatabase.travel || []), ...extractItems(travelFiles)],
-    gourmet: [...(legacyDatabase.gourmet || []), ...extractItems(gourmetFiles)],
-    bluray: [...(legacyDatabase.bluray || []), ...extractItems(blurayFiles)],
+    studies: extractItems(studiesFiles),
+    guide: extractItems(guideFiles),
+    essays: extractItems(essaysFiles),
+    lynch: extractItems(lynchFiles),
+    travel: extractItems(travelFiles),
+    gourmet: extractItems(gourmetFiles),
+    bluray: extractItems(blurayFiles),
 };
