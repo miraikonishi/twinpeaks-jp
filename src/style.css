@@ -354,9 +354,6 @@ article[data-category="studies"]:hover img {
 }
 
 /* Stagger animation for grid items */
-section {
-  animation: fadeIn 0.5s ease-out;
-}
 
 /* Red glow effect on primary elements */
 .bg-primary {
