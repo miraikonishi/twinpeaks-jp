@@ -1,5 +1,5 @@
 import React from 'react';
-import { database } from '../data';
+import { database } from '../dataLoader';
 import { EpisodeCard } from '../components/Cards';
 import { Link } from 'react-router-dom';
 

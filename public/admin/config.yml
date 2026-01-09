@@ -1,0 +1,127 @@
+# Sveltia CMS Configuration
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: miraikonishi/twinpeaks-jp
+  branch: main
+
+locale: ja
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  # エピソード解説
+  - name: studies
+    label: エピソード解説
+    label_singular: エピソード
+    folder: content/studies
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: ID, name: id, widget: string, hint: "例: ep1, ep2" }
+      - { label: タイトル, name: title, widget: string }
+      - { label: 原題, name: originalTitle, widget: string, required: false }
+      - { label: 副題, name: secondaryTitle, widget: string, required: false }
+      - { label: サムネイル画像, name: image, widget: image }
+      - { label: 概要, name: excerpt, widget: text }
+      - { label: 本文, name: content, widget: markdown }
+
+  # 入門ガイド
+  - name: guide
+    label: 入門ガイド
+    label_singular: ガイド記事
+    folder: content/guide
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: ID, name: id, widget: string }
+      - { label: タイトル, name: title, widget: string }
+      - { label: サムネイル画像, name: image, widget: image }
+      - { label: 概要, name: excerpt, widget: text }
+      - { label: 本文, name: content, widget: markdown }
+
+  # 考察・エッセイ
+  - name: essays
+    label: 考察・エッセイ
+    label_singular: エッセイ
+    folder: content/essays
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: ID, name: id, widget: string }
+      - { label: タイトル, name: title, widget: string }
+      - { label: サムネイル画像, name: image, widget: image }
+      - { label: 概要, name: excerpt, widget: text }
+      - { label: 本文, name: content, widget: markdown }
+
+  # デヴィッド・リンチ
+  - name: lynch
+    label: デヴィッド・リンチ
+    label_singular: リンチ記事
+    folder: content/lynch
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: ID, name: id, widget: string }
+      - { label: タイトル, name: title, widget: string }
+      - { label: サムネイル画像, name: image, widget: image }
+      - { label: 概要, name: excerpt, widget: text }
+      - { label: 本文, name: content, widget: markdown }
+
+  # ロケ地
+  - name: travel
+    label: ロケ地
+    label_singular: ロケ地記事
+    folder: content/travel
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: ID, name: id, widget: string }
+      - { label: タイトル, name: title, widget: string }
+      - { label: サムネイル画像, name: image, widget: image }
+      - { label: 概要, name: excerpt, widget: text }
+      - { label: 本文, name: content, widget: markdown }
+
+  # グルメ
+  - name: gourmet
+    label: グルメ
+    label_singular: グルメ記事
+    folder: content/gourmet
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: ID, name: id, widget: string }
+      - { label: タイトル, name: title, widget: string }
+      - { label: サムネイル画像, name: image, widget: image }
+      - { label: 概要, name: excerpt, widget: text }
+      - { label: 本文, name: content, widget: markdown }
+
+  # Blu-ray / アーカイブ
+  - name: bluray
+    label: Blu-ray・アーカイブ
+    label_singular: アーカイブ記事
+    folder: content/bluray
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: ID, name: id, widget: string }
+      - { label: タイトル, name: title, widget: string }
+      - { label: サムネイル画像, name: image, widget: image }
+      - { label: 概要, name: excerpt, widget: text }
+      - { label: 本文, name: content, widget: markdown }

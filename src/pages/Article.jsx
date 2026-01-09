@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { database } from '../data';
+import { database } from '../dataLoader';
 import { Link } from 'react-router-dom';
 
 const Article = () => {
